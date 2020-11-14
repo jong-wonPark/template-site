@@ -1,13 +1,15 @@
 @import url("framework.css");
 
 body {
-  width: 500px;
+  width: 1000px;
   margin: 0 auto;
 }
 
+h.Korean-lang{font-family: 'Nanum Gothic'}
+
 p {
     background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
+    /*border: 2px solid rgb(79,185,227);*/
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
@@ -22,8 +24,23 @@ p {
 }
 
 div.wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 100px 100px;
-    grid-gap: 10px;
+    display: flex;
+    margin: 2em auto;
+}
+
+@media screen and (min-width: 600px) {
+.col1 {
+  background: rgba(255,84,104,.3);
+  flex: 1;
+    margin-right: 5%;
+}
+
+.col2 {
+  background: rgb(207,232,220);
+  flex: 2;
+}
+}
+
+.container {
+  column-count: 3;
 }
